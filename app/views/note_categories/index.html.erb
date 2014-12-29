@@ -1,0 +1,23 @@
+<h1>Listing note_categories</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @note_categories.each do |note_category| %>
+  <tr>
+    <td><%= note_category.title %></td>
+    <td><%= link_to 'Show', note_category %></td>
+    <td><%= link_to 'Edit', edit_note_category_path(note_category) %></td>
+    <td><%= link_to 'Destroy', note_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Note category', new_note_category_path %>

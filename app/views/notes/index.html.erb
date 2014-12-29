@@ -1,0 +1,19 @@
+<%= link_to 'New Note', new_note_path %>
+
+<h1>Trip Notes</h1>
+
+<% @category_list.uniq.each do |menu| %>
+  <%= link_to menu.title, notes_path(:cat_id => menu.id) %> | 
+<% end %>
+
+<br />
+
+
+<% @categories.uniq.each do |category| %>
+<h2 class="category_header"><%= category.title %></h2>
+<% category.notes.each do |note| %>
+<h2><%= link_to note.title, note %></h2>
+<p><%= simple_format(note.note) %></p>
+<hr />
+<% end %>
+<% end %>

@@ -6,9 +6,47 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<%= yield %>
+<div id="top">&nbsp;</div>
 
+<div id="container">
+
+<%# if client_signed_in? %>
+    <%#= button_to 'Logout', destroy_client_session_path, :method => :delete, :class => 'logout-btn' %>
+<%# end %>
+
+<header>
+    <div class="logo">
+        
+    </div>
+</header>
+
+<nav id="top-nav">
+    <%#= render 'layouts/nav' %>
+</nav>
+
+<div id="main">
+
+<section id="sidebar-left">
+
+</section>
+
+<section id="content">
+    <article>
+        <p id="notice"><%= notice %></p>
+        <%= yield %>
+    </article>
+</section>
+
+
+</div>
+
+<footer>
+    <%#= render 'layouts/footer' %>
+</footer>
+</div>
 </body>
 </html>
+

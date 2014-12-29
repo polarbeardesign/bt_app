@@ -1,4 +1,8 @@
 BtApp::Application.routes.draw do
+  resources :note_categories
+
+  resources :notes
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

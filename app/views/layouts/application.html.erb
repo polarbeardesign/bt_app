@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BtApp</title>
+  <title>The Big Trip</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -13,14 +13,15 @@
 
 <div id="container">
 
-<%# if client_signed_in? %>
-    <%#= button_to 'Logout', destroy_client_session_path, :method => :delete, :class => 'logout-btn' %>
-<%# end %>
+<% if user_signed_in? %>
+    <%= button_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'logout-btn' %>
+<% end %>
 
 <header>
     <div class="logo">
-        
+        <%= link_to image_tag('map.png'), "/" %>
     </div>
+<h1>The Big Trip</h1><p class="tagline">Paris, Casablanca, Marrakesh, Nice, Wales, London</p>
 </header>
 
 <nav id="top-nav">
@@ -30,7 +31,7 @@
 <div id="main">
 
 <section id="sidebar-left">
-
+  <%= yield :sidebar %>
 </section>
 
 <section id="content">

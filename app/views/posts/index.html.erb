@@ -1,0 +1,19 @@
+<% content_for :sidebar do %>
+
+<% if user_signed_in? %>
+<% if current_user.roles.any? {|role| role.name == "member" } %>
+  <div align="center">
+  <%= button_to 'Add New Post', new_post_path, :method => :get %>
+  </div>
+<% end %>
+<% end %>
+<% end %>
+
+<h1>Blog</h1>
+
+<% @posts.each do |post| %>
+<h2><%= link_to post.title, post %></h2>
+<p><%= simple_format(post.content) %></p>
+<hr />
+<% end %>
+

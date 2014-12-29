@@ -1,0 +1,28 @@
+<% content_for :sidebar do %>
+
+  <%= link_to 'New Right', new_right_path %>
+
+<% end %>
+
+<h1>Rights</h1>
+
+<table>
+  <tr>
+    <th>Resource</th>
+    <th>Operation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rights.each do |right| %>
+  <tr>
+    <td><%= right.resource %></td>
+    <td><%= right.operation %></td>
+    <td><%= link_to 'Show', right %></td>
+    <td><%= link_to 'Edit', edit_right_path(right) %></td>
+    <td><%= link_to 'Destroy', right, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+

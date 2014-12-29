@@ -1,9 +1,27 @@
 BtApp::Application.routes.draw do
+
+  resources :assignments
+
+  resources :posts
+
+  resources :grants
+
+  resources :roles
+
+  resources :rights
+
+devise_for :users, :skip => [:registrations]                                          
+    as :user do
+      get "login", :to => "devise/sessions#new"
+      get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    
+      put 'users' => 'devise/registrations#update', :as => 'user_registration'            
+    end
+
   resources :note_categories
 
   resources :notes
 
-  root :to => 'notes#index'
+  root :to => 'posts#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

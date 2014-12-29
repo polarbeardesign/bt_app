@@ -1,4 +1,9 @@
-<%= link_to 'New Note', new_note_path %>
+<% content_for :sidebar do %>
+
+  <%= link_to 'New Note', new_note_path %> | 
+  <%= link_to 'New Category', new_note_category_path %>
+
+<% end %>
 
 <h1>Trip Notes</h1>
 

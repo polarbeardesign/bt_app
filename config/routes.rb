@@ -3,7 +3,7 @@ BtApp::Application.routes.draw do
 
   resources :notes
 
-  root :to => "notes"
+  root :to => 'notes#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

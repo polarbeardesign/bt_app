@@ -1,12 +1,7 @@
-<p>
-  <b>Title:</b>
-  <%= @note.title %>
-</p>
+<h1><%= @note.title %></h1>
 
-<p>
-  <b>Note:</b>
-  <%= @note.note %>
-</p>
+<%= simple_format(@note.note) %>
+
 
 
 <%= link_to 'Edit', edit_note_path(@note) %> |

@@ -40,8 +40,8 @@ end
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# TinyMCE editor features
+  gem 'tinymce-rails'
 
 # To use debugger
 # gem 'ruby-debug'

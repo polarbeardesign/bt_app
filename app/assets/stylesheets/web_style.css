@@ -193,7 +193,7 @@ sub {
 }
 input[type="text"],
 textarea {
-  background: #dbf7ff;
+  background: #F7F4E4;
   border: 1px solid #ccc;
   box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
   -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);

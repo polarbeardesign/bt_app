@@ -34,6 +34,9 @@
 
 <section id="sidebar-left">
   <%= yield :sidebar %>
+  <% if user_signed_in? %>
+    <%= render 'layouts/admin_nav' %>
+  <% end %>
 </section>
 
 <section id="content">

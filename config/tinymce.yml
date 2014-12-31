@@ -1,0 +1,12 @@
+width: 100%
+height: 25%
+browser_spellcheck : true
+menubar : false
+# menubar: "tools table format view insert edit"
+toolbar:
+  - styleselect | bold italic | undo redo | image | link | code
+#   -  newdocument bold italic underline strikethrough alignleft aligncenter alignright alignjustify styleselect formatselect fontselect fontsizeselect cut copy paste bullist numlist outdent indent blockquote undo redo removeformat subscript superscript
+plugins:
+  - image
+  - link
+  - code

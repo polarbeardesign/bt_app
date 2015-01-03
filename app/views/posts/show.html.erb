@@ -1,14 +1,7 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @post.title %></h1>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+<%= sanitize(@post.content) %>
 
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
 
 <p>
   <b>Published:</b>

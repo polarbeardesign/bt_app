@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-skip_before_filter :check_authorization, :only => [:flight_feed]
+skip_before_filter :check_authorization, :check_authentication, :only => [:flight_feed]
 
   # GET /events
   # GET /events.json

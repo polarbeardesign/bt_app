@@ -80,4 +80,15 @@ class EventsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+def flight_feed
+
+  @events = Event.flights.all
+
+  respond_to do |format|
+    # added { render :ics => @events } to see if can avoid layout call
+    format.ics { render :ics => @events }
+  end
+end
+
 end

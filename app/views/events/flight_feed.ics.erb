@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+VERSION:2.0
+PRODID:http://thebigtrip.toliveistofly.com
+X-WR-CALNAME:BT Flights
+CALSCALE:GERGORIAN
+<% @events.each do |event| %>
+BEGIN:VEVENT
+UID:<%= event.id %>
+DTSTAMP:<%= Time.now.strftime("%Y%m%dT%H%M%SZ") %>
+DTSTART:<%= event.start.strftime("%Y%m%dT%H%M%S") %>
+DTEND:<%= event.end.strftime("%Y%m%dT%H%M%S") %>
+SUMMARY:<%= event.title.titleize %> <% if event.event_statuses_id == 2 %> | -- Tentative<% elsif event.event_statuses_id == 3 %> | -- Canceled<% end %>
+LOCATION:<%= event.location %>
+DESCRIPTION: More Info: http://thebigtrip.toliveistofly.com/events/<%= event.id %>
+END:VEVENT
+<% end %>
+END:VCALENDAR

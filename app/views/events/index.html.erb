@@ -1,6 +1,6 @@
-<h1>Listing events</h1>
+<h1>Calendars</h1>
 
-<table>
+<table class="time-table">
   <tr>
     <th>Start</th>
     <th>End</th>
@@ -8,22 +8,16 @@
     <th>Title</th>
     <th>Location</th>
     <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @events.each do |event| %>
-  <tr>
-    <td><%= event.start %></td>
-    <td><%= event.end %></td>
+  <tr class="<%= cycle('row_1', 'row_2') %>">
+    <td><%= event.start.strftime("%b %d, %Y") %></td>
+    <td><%= event.end.strftime("%b %d, %Y") %></td>
     <td><%= event.event_type %></td>
-    <td><%= event.title %></td>
+    <td><%= link_to event.title, event %></td>
     <td><%= event.location %></td>
     <td><%= event.description %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

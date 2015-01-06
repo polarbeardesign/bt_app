@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141229232409) do
+ActiveRecord::Schema.define(:version => 20150106004222) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(:version => 20141229232409) do
 
   add_index "assignments", ["role_id"], :name => "index_assignments_on_role_id"
   add_index "assignments", ["user_id"], :name => "index_assignments_on_user_id"
+
+  create_table "events", :force => true do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.string   "type"
+    t.string   "title"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "grants", :force => true do |t|
     t.integer  "right_id"

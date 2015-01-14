@@ -16,6 +16,7 @@ class NotesController < ApplicationController
   # GET /notes/1.json
   def show
     @note = Note.find(params[:id])
+    @category_list = NoteCategory.all
 
     respond_to do |format|
       format.html # show.html.erb

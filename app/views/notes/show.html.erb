@@ -1,8 +1,16 @@
+
+
+<% @category_list.uniq.each do |menu| %>
+  <%= link_to menu.title, notes_path(:cat_id => menu.id) %> | 
+<% end %>
+
+<div class="page_nav">
+  <%= link_to 'Edit', edit_note_path(@note) %> |
+  <%= link_to 'Back', notes_path %>
+</div>
 <h1><%= @note.title %></h1>
 
 <%= sanitize(@note.note) %>
 
 
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>

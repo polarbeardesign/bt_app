@@ -80,34 +80,29 @@ hr {
 }
 
 /* Text elements */
-h1 {
-    font-size: 1.25em;
-    font-weight: bold;
-    margin: 1em 0 1em 0;
-    }
 
-h1.internal {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.25em;
-    font-weight: 300;
-    margin: 1em 0 1em 0;
+h1, h2, h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  margin: 1em 0 1em 0;
+  line-height: 1.4em;
+  }
+
+h1 {
+    font-size: 1.4em;
     }
 
 h2 {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 1em 0 1em 0;
-    line-height: 1.4em;
+    font-size: 1.2em;
     }
 
 h3 {
-    font-size: 1.25em;
-    font-weight: bold;
-    margin: 0 0 1em 0;
+    font-size: 1.1em;
     }
 
 p {
   margin-bottom: 1em;
+  font-size: 1em;
 }
 ul {
   list-style: disc;
@@ -214,7 +209,13 @@ a:active,
 a:hover {
   color: #003366;
     text-decoration: underline;
+    background-color: #edfbff;
     }
+
+.button_to,
+.button_to div {
+  display: inline;
+}
 
 /* -----------------------------------------------------------
 --- Small Screen styling

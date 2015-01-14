@@ -1,10 +1,7 @@
-<% content_for :sidebar do %>
-
-  <%= link_to 'New Note', new_note_path %> | 
-  <%= link_to 'New Category', new_note_category_path %>
-
-<% end %>
-
+<div style="float: right;">
+  <%= button_to "Add Note", new_note_path, :method => :get, :class => "inline_btn" %> | 
+  <%= button_to 'Add Category', new_note_category_path, :method => :get, :class => "inline_btn" %>
+</div>
 <h1>Trip Notes</h1>
 
 <% @category_list.uniq.each do |menu| %>

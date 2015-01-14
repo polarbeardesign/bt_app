@@ -15,7 +15,7 @@
 <h2 class="category_header"><%= category.title %></h2>
 <% category.notes.each do |note| %>
 <h2><%= link_to note.title, note %></h2>
-<p><%= simple_format(note.note) %></p>
+<p><%= sanitize(note.note) %></p>
 <hr />
 <% end %>
 <% end %>

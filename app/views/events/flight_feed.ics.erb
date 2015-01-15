@@ -7,7 +7,7 @@ CALSCALE:GERGORIAN
 <% @events.each do |event| %>
 BEGIN:VEVENT
 UID:<%= event.id %>
-DTSTAMP;TZID=Europe/London:<%= Time.now.strftime("%Y%m%dT%H%M%S") %>
+DTSTAMP;TZID=US/Central:<%= Time.now.strftime("%Y%m%dT%H%M%S") %>
 DTSTART;TZID=Europe/London:<%= event.start.strftime("%Y%m%dT%H%M%S") %>
 DTEND;TZID:Europe/London:<%= event.end.strftime("%Y%m%dT%H%M%S") %>
 SUMMARY:<%= event.title %>

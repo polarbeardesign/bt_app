@@ -1,5 +1,9 @@
-<h1>Calendars</h1>
+<div style="float: right;">
+  <%= button_to "Add Event", new_event_path, :method => :get, :class => "inline_btn" %>
+</div>
 
+<h1>Calendars</h1>
+<p>Flights</p>
 <table class="time-table">
   <tr>
     <th>Start</th>
@@ -10,18 +14,40 @@
     <th>Description</th>
   </tr>
 
-<% @events.each do |event| %>
+<% @flight_events.each do |flight_event| %>
   <tr class="<%= cycle('row_1', 'row_2') %>">
-    <td><%= event.start.strftime("%b %d, %H:%M") %></td>
-    <td><%= event.end.strftime("%b %d, %H:%M") %></td>
-    <td><%= event.event_type %></td>
-    <td><%= link_to event.title, event %></td>
-    <td><%= event.location %></td>
-    <td><%= event.description %></td>
+    <td><%= flight_event.start.strftime("%b %d, %H:%M") %></td>
+    <td><%= flight_event.end.strftime("%b %d, %H:%M") %></td>
+    <td><%= flight_event.event_type %></td>
+    <td><%= link_to flight_event.title, flight_event %></td>
+    <td><%= flight_event.location %></td>
+    <td><%= flight_event.description %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Event', new_event_path %>
+<p>Lodging</p>
+<table class="time-table">
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Event Type</th>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Description</th>
+  </tr>
+
+<% @lodging_events.each do |lodging_event| %>
+  <tr class="<%= cycle('row_1', 'row_2') %>">
+    <td><%= lodging_event.start.strftime("%b %d, %H:%M") %></td>
+    <td><%= lodging_event.end.strftime("%b %d, %H:%M") %></td>
+    <td><%= lodging_event.event_type %></td>
+    <td><%= link_to lodging_event.title, lodging_event %></td>
+    <td><%= lodging_event.location %></td>
+    <td><%= lodging_event.description %></td>
+  </tr>
+<% end %>
+</table>
+

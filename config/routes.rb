@@ -2,7 +2,7 @@ BtApp::Application.routes.draw do
 
   resources :events
   match 'flight_feed' => 'events#flight_feed', :as => :flight_feed
-
+  match 'lodging_feed' => 'events#lodging_feed', :as => :lodging_feed
 
   resources :assignments
 

@@ -21,7 +21,7 @@
     <td><%= flight_event.event_type %></td>
     <td><%= link_to flight_event.title, flight_event %></td>
     <td><%= flight_event.location %></td>
-    <td><%= flight_event.description %></td>
+    <td><%= simple_format(flight_event.description) %></td>
   </tr>
 <% end %>
 </table>
@@ -46,7 +46,7 @@
     <td><%= lodging_event.event_type %></td>
     <td><%= link_to lodging_event.title, lodging_event %></td>
     <td><%= lodging_event.location %></td>
-    <td><%= lodging_event.description %></td>
+    <td><%= simple_format(lodging_event.description) %></td>
   </tr>
 <% end %>
 </table>

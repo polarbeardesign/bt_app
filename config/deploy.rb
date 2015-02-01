@@ -1,5 +1,5 @@
 # Capistrano (v2.8.0 and above) includes a recipe to handle Precompiling Assets in deployment.
-load 'deploy/assets'
+# load 'deploy/assets'
 
 set :user, "toliveis"  # The server's user for deploys
 set :domain, 'toliveistofly.com'
@@ -32,7 +32,7 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 
 before "deploy:assets:precompile", "deploy:symlink_db_file"
 
-after "deploy:restart", "deploy:cleanup", "deploy:symlink_env_file", "deploy:symlink_htaccess_file"
+after "deploy:restart", "deploy:cleanup", "deploy:symlink_db_file", "deploy:symlink_env_file", "deploy:symlink_htaccess_file"
 
 namespace :deploy do
 

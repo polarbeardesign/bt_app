@@ -5,7 +5,7 @@ skip_before_filter :check_authorization, :check_authentication, :only => [:index
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.reverse.all
 
     respond_to do |format|
       format.html # index.html.erb

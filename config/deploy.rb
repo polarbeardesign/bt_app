@@ -14,7 +14,7 @@ set :ssh_options, { :forward_agent => true }
 set :deploy_to, "/home/#{user}/#{application}"
 set :scm_verbose, true
 set :use_sudo, false
-set :rails_env, :production
+#set :rails_env, :production
 
 # to overcome the "stdin: is not a tty\n" error
 default_run_options[:pty] = true 

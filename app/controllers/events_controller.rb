@@ -85,22 +85,22 @@ skip_before_filter :check_authorization, :check_authentication, :only => [:fligh
     end
   end
 
-def flight_feed
+  def flight_feed
 
-  @events = Event.flights.all
+    @events = Event.flights.all
 
-  respond_to do |format|
-    format.ics { render :ics => @events }
+    respond_to do |format|
+      format.ics { render :ics => @events }
+    end
   end
-end
 
-def lodging_feed
+  def lodging_feed
 
-  @events = Event.lodging.all
+    @events = Event.lodging.all
 
-  respond_to do |format|
-    format.ics { render :ics => @events }
+    respond_to do |format|
+      format.ics { render :ics => @events }
+    end
   end
-end
 
 end

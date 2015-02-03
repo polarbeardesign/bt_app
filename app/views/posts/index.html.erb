@@ -9,9 +9,12 @@
 <% end %>
 <% end %>
 
-<h1>Blog</h1>
 
 <% @posts.each do |post| %>
+<div class="calendar-css">
+<div class="calendar-month"><%= post.created_at.strftime("%b") %></div>
+<div class="calendar-date"><%= post.created_at.strftime("%d") %></div>
+</div>
 <h2><%= link_to post.title, post %></h2>
 <p><%= sanitize(post.content) %></p>
 <hr />

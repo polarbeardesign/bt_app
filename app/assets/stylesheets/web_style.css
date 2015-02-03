@@ -568,6 +568,24 @@ th {
   font-size: 1.4em;
   }
 
+.image_right {
+  float: right;
+  border: 1px solid #ddd;
+  padding: 6px;
+  margin: 0 0 1em 1em;
+  }
+
+.image_right > p {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8em;
+  }
+
+.image_right > img {
+  border: 1px solid #333;
+  margin: 0 0 1em 0;
+  }
+
 /*----------------------------------------------------
 Wide Style
 -------------------------------------------------------*/

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-skip_before_filter :check_authorization, :check_authentication, :only => [:index]
+skip_before_filter :check_authorization, :check_authentication, :only => [:index, :show]
 
   # GET /posts
   # GET /posts.json

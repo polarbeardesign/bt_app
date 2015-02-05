@@ -12,7 +12,9 @@ DTSTART;TZID=Europe/London:<%= event.start.strftime("%Y%m%dT%H%M%S") %>
 DTEND;TZID=Europe/London:<%= event.end.strftime("%Y%m%dT%H%M%S") %>
 SUMMARY:<%= event.title %>
 LOCATION:<%= event.location %>
-DESCRIPTION: <%= simple_format(event.description) %>. More Info: http://thebigtrip.toliveistofly.com/events/<%= event.id %>
+DESCRIPTION: <%= event.description.gsub '\n', '\\n' %>. 
+
+More Info: http://thebigtrip.toliveistofly.com/events/<%= event.id %>
 END:VEVENT
 <% end %>
 END:VCALENDAR

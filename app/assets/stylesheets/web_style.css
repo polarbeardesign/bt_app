@@ -568,22 +568,38 @@ th {
   font-size: 1.4em;
   }
 
-.image_right {
-  float: right;
+.image_right, .image_center {
   border: 1px solid #ddd;
   padding: 6px;
+  clear: both;
+  }
+
+.image_right {
+  float: right;
   margin: 0 0 1em 1em;
   }
 
-.image_right > p {
+.image_center {
+  margin: 0 0 1em 0;
+  }
+
+.image_right > p, .image_center > p {
   text-align: center;
   font-style: italic;
   font-size: 0.8em;
   }
 
-.image_right > img {
+.image_right > img, .image_center > img {
   border: 1px solid #333;
+  }
+
+.image_right > img {
   margin: 0 0 1em 0;
+  }
+
+.image_center > img {
+  display: block;
+  margin: 0 auto 1em;
   }
 
 /*----------------------------------------------------

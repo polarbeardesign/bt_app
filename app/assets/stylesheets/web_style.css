@@ -571,15 +571,11 @@ th {
 .image_right, .image_center {
   border: 1px solid #ddd;
   padding: 6px;
+  width: 100%;
   clear: both;
   }
 
-.image_right {
-  float: right;
-  margin: 0 0 1em 1em;
-  }
-
-.image_center {
+.image_right, .image_center {
   margin: 0 0 1em 0;
   }
 
@@ -591,6 +587,7 @@ th {
 
 .image_right > img, .image_center > img {
   border: 1px solid #333;
+  width: 100%;
   }
 
 .image_right > img {
@@ -816,7 +813,12 @@ nav#hp-nav a:hover, nav#top-nav a:hover {
   padding: 0 1em;
   }
 
-
+.image_right {
+  float: right;
+  margin: 0 0 1em 1em;
+  width: 45%;
+  }
+  
 }
 
 

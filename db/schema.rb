@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150106004222) do
+ActiveRecord::Schema.define(:version => 20150217111418) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "user_id"
@@ -25,10 +25,18 @@ ActiveRecord::Schema.define(:version => 20150106004222) do
   create_table "events", :force => true do |t|
     t.datetime "start"
     t.datetime "end"
-    t.string   "type"
+    t.string   "event_type"
     t.string   "title"
     t.string   "location"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "galleries", :force => true do |t|
+    t.string   "gallery_name"
+    t.text     "description"
+    t.string   "gallery_pic"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,6 +70,19 @@ ActiveRecord::Schema.define(:version => 20150106004222) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "photos", :force => true do |t|
+    t.integer  "gallery_id"
+    t.string   "photo_title"
+    t.text     "description"
+    t.string   "filename"
+    t.integer  "order"
+    t.string   "path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "photos", ["gallery_id"], :name => "index_photos_on_gallery_id"
 
   create_table "posts", :force => true do |t|
     t.string   "title"

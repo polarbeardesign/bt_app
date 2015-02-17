@@ -1,0 +1,30 @@
+<%= link_to 'Back to ' + @photo.gallery.gallery_name + ' Gallery', gallery_url(@photo.gallery_id) %>
+<% if user_signed_in? %>
+  <div class="admin-nav">
+    <%= link_to 'Edit', edit_photo_path(@photo) %>
+  </div><br />
+<% end %>
+
+<div class="photo_viewer">
+
+<p>
+<% if @photo.id - 1 >= @photo.gallery.photos.first.id %>
+  <%= link_to 'Previous', photo_path(@photo.id - 1) %> 
+<% else %>
+  <em>beginning -></em>
+<% end %>
+
+| 
+<% if @photo.id + 1 <= @photo.gallery.photos.last.id %>
+  <%= link_to 'Next', photo_path(@photo.id + 1) %> 
+<% else %>
+  <em> <- end</em>
+<% end %>
+<p><%= @photo.description %></p>
+</p>
+
+  <%= image_tag @photo.gallery.gallery_path + @photo.filename %>
+
+
+
+</div>

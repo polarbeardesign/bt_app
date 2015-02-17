@@ -1,0 +1,20 @@
+<div class="admin-nav">
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_gallery_path(@gallery) %> | 
+    <%= link_to 'Back', galleries_path %>
+  <% end %>
+</div>
+
+<h1><%= @gallery.gallery_name %></h1>
+</p>
+
+<p><%= @gallery.description %></p>
+
+<div class="flex-row">
+  <% @gallery.photos.each_with_index do |photo, i| %>
+    <div class="photo_cell">
+      <%= link_to (image_tag photo.gallery.gallery_path + 'thumbs/' + photo.filename), photo_path(photo) %><br />
+      <%= photo.description %>
+    </div>
+  <% end %>
+</div>

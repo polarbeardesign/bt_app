@@ -1,0 +1,20 @@
+<div class="admin-nav">
+  <% if user_signed_in? %>
+    <%= link_to 'New Gallery', new_gallery_path %>
+  <% end %>
+</div>
+
+<h1>Photo Galleries</h1>
+
+<div class="flex-row">
+  <% @galleries.each_with_index do |gallery, i| %>
+    <div class="photo_cell">
+      <%= link_to (image_tag  gallery.gallery_path + 'thumbs/' + gallery.gallery_pic), gallery %><br />
+      <%= link_to gallery.gallery_name, gallery %><br />
+      <%= gallery.description %>
+      <% if session[:current_user] %>
+        <br /><%= link_to 'Edit', edit_gallery_path(gallery) %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

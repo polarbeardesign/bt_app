@@ -599,9 +599,38 @@ th {
   margin: 0 auto 1em;
   }
 
-/*----------------------------------------------------
+.photo_cell {
+  text-align: center;
+  padding: 4px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  }
+
+.photo_cell > a >img {
+  width: 100%;
+  border: 1px solid #000;
+  }
+
+.photo_viewer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+.photo_viewer img {
+  border: 1px solid #000;
+  }
+
+.admin-nav {
+  text-align: right;
+  }
+
+/*---------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
 Wide Style
--------------------------------------------------------*/
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------*/
+
 @media only screen and (min-width: 800px) {
 
 #container {
@@ -793,6 +822,17 @@ nav#hp-nav a:hover, nav#top-nav a:hover {
    padding-bottom: 1em;
   }
 
+.flex-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+   margin-bottom: 2em;
+   padding-bottom: 1em;
+  }
+
 .image-cell {
     -webkit-flex: 2;
     -ms-flex: 2;
@@ -817,6 +857,10 @@ nav#hp-nav a:hover, nav#top-nav a:hover {
   float: right;
   margin: 0 0 1em 1em;
   width: 45%;
+  }
+
+.photo_cell {
+  width: 30%;
   }
   
 }

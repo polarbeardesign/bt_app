@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Big Trip</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+</head>
+<body>
+
+<div id="top">&nbsp;</div>
+
+<div id="container">
+
+<% if user_signed_in? %>
+    <%= button_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'logout-btn' %>
+<% end %>
+
+<header>
+<h1 style="margin-top: 1px;">The Big Trip</h1>
+</header>
+
+<nav id="top-nav">
+    <%#= render 'layouts/nav' %>
+</nav>
+
+
+
+
+<%= yield %>
+
+
+
+<footer>
+    <%#= render 'layouts/footer' %>
+</footer>
+</div>
+</body>
+</html>
+

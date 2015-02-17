@@ -246,6 +246,15 @@ nav#hp-nav {
 
 /* for Other Pages */
 
+header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  }
+
 header.logo {
     -webkit-flex: 3;
     -ms-flex: 3;
@@ -320,7 +329,7 @@ nav {
 
 nav ul {
   list-style: none;
-  margin: 0 0 1em 0;
+  margin: 0 0 0 0;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -346,7 +355,7 @@ nav li { /* all list items */
  }
 nav a:hover, nav a.sfhover {/* hover styles - my code */
   text-decoration: none;
-  background: #0574ab;
+  background: #e7deb0;
   color: #fff;
   }
 
@@ -672,15 +681,31 @@ nav#hp-nav {
 
 /* for Other Pages */
 
+
+header {
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-justify-content: space-between; 
+  -ms-flex-pack: space-between; 
+  -justify-content: space-between;
+  }
+
+header.title {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    }
+
 header.logo {
-    -webkit-order: 3;
-    -ms-flex-order: 3;
-    order: 3;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     }
 
 header h1 {
     text-align: right;
-    margin: -3em 1em 0.5em 0;
+    margin: 0em 1em 0.5em 0;
     }
 
 header p {
@@ -692,34 +717,6 @@ nav#top-nav {
   -webkit-order: 4;
   -ms-order: 4;
   order: 4;
-  }
-
-/*----------------------------------------------------
-  Side Nav
--------------------------------------------------------*/
-
-nav#side-nav {
-  font-weight: 200;
-  font-size: 1.3em;
-  line-height: 0;
-  list-style: none;
-  text-shadow: 0 0 3px #999, 4px 4px 4px #ccc;
-  }
-
-nav#side-nav li {
-  margin: 0;
-
-
-}
-
-nav#side-nav a {
-  color: #fff;
-  border: none;}
-
-nav#side-nav a:hover {
-  text-decoration: none;
-  text-shadow: 0 0 3px #68a5d2, 4px 4px 4px #b1dcf2;
-  background: none;
   }
 
 
@@ -775,35 +772,34 @@ nav {
 nav#top-nav ul {
   width: 70%;
   float: right;
-  margin-top: -60px;
+  margin-top: -40px;
   }
 
 nav#hp-nav ul, nav#top-nav ul  {
   font-weight: 200;
-  font-size: 1.8em;
+  font-size: 1.4em;
   list-style: none;
-  text-shadow: 0 0 3px #999, 4px 4px 4px #ccc;
   -webkit-flex-flow: row;
   -ms-flex-flow: row;
   flex-flow: row;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   }
 
 nav#hp-nav li, nav#top-nav li {
-  min-width: 200px;
+  min-width: 150px;
   display: block;
   }
 
 nav#hp-nav a, nav#top-nav a  {
-  color: #fff;
+  color: #87761C;
   border: none;
   }
 
 nav#hp-nav a:hover, nav#top-nav a:hover {
   text-decoration: none;
-  text-shadow: 0 0 3px #68a5d2, 4px 4px 4px #b1dcf2;
+  text-shadow: 0 0 3px #e7deb0;
   background: none;
   }
 

@@ -23,20 +23,20 @@
     <div class="logo">
         <%= link_to image_tag('map.png'), "/" %>
     </div>
-<h1>The Big Trip</h1><p class="tagline">Paris, Casablanca, Marrakesh, Nice, Wales, London</p>
+    <div  class="title">
+      <h1>The Big Trip</h1><p class="tagline">Paris, Casablanca, Marrakesh, Nice, Wales, London</p>
+    </div>
 </header>
 
 <nav id="top-nav">
-    <%#= render 'layouts/nav' %>
+    <%= render 'layouts/nav' %>
 </nav>
 
 <div id="main">
 
 <section id="sidebar-left">
   <%= yield :sidebar %>
-  <% if user_signed_in? %>
-    <%= render 'layouts/admin_nav' %>
-  <% end %>
+
 <%# Paris %>
 <span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.37.07156&bannertypeclick=wu_simplewhite" title="Paris, France Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_simplewhite&airportcode=LFPO&ForcedCity=Paris&ForcedState=France&wmo=07156&language=EN" alt="Find more about Weather in Paris, FR" width="160" /></a></span>
 <%# Marrakech %>

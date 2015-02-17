@@ -1,14 +1,10 @@
-<% content_for :sidebar do %>
-
 <% if user_signed_in? %>
-<% if current_user.roles.any? {|role| role.name == "member" } %>
-  <div align="center">
-  <%= button_to 'Add New Post', new_post_path, :method => :get %>
-  </div>
+  <% if current_user.roles.any? {|role| role.name == "member" } %>
+    <div style="float: right;">
+      <%= button_to 'Add New Post', new_post_path, :method => :get, :class => "inline_btn" %>
+    </div>
+  <% end %>
 <% end %>
-<% end %>
-<% end %>
-
 
 <% @posts.each do |post| %>
 <div class="calendar-css">

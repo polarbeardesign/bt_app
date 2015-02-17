@@ -792,7 +792,7 @@ nav#hp-nav ul, nav#top-nav ul  {
   }
 
 nav#hp-nav li, nav#top-nav li {
-  min-width: min-content;
+  min-width: 200px;
   display: block;
   }
 

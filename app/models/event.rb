@@ -5,5 +5,7 @@ class Event < ActiveRecord::Base
   scope :flights, where("event_type = 'Flight'")
   
   scope :lodging, where("event_type = 'Lodging'")
+  
+  scope :ordered, order("events.start ASC")
 
 end

@@ -5,8 +5,8 @@ skip_before_filter :check_authorization, :check_authentication, :only => [:fligh
   # GET /events
   # GET /events.json
   def index
-    @flight_events = Event.flights.all
-    @lodging_events = Event.lodging.all
+    @flight_events = Event.flights.ordered.all
+    @lodging_events = Event.lodging.ordered.all
 
     respond_to do |format|
       format.html # index.html.erb

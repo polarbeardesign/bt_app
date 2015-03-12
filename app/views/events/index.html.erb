@@ -44,7 +44,7 @@
     <td><%= ground_event.start.strftime("%b %d, %H:%M") %></td>
     <td><%= ground_event.end.strftime("%b %d, %H:%M") %></td>
     <td><%= ground_event.event_type %></td>
-    <td><%= link_to ground_event.title, lodging_event %></td>
+    <td><%= link_to ground_event.title, ground_event %></td>
     <td><%= ground_event.location %></td>
     <td><%= simple_format(ground_event.description) %></td>
   </tr>

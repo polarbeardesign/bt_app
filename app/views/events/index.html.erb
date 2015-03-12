@@ -28,6 +28,31 @@
 
 <br />
 
+<p>Ground Transportation</p>
+<table class="time-table">
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Event Type</th>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Description</th>
+  </tr>
+
+<% @ground_events.each do |ground_event| %>
+  <tr class="<%= cycle('row_1', 'row_2') %>">
+    <td><%= ground_event.start.strftime("%b %d, %H:%M") %></td>
+    <td><%= ground_event.end.strftime("%b %d, %H:%M") %></td>
+    <td><%= ground_event.event_type %></td>
+    <td><%= link_to ground_event.title, lodging_event %></td>
+    <td><%= ground_event.location %></td>
+    <td><%= simple_format(ground_event.description) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
 <p>Lodging</p>
 <table class="time-table">
   <tr>

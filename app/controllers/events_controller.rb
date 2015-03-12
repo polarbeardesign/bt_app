@@ -7,6 +7,7 @@ skip_before_filter :check_authorization, :check_authentication, :only => [:fligh
   def index
     @flight_events = Event.flights.ordered.all
     @lodging_events = Event.lodging.ordered.all
+    @ground_events = Event.grdtrnsp.ordered.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,7 +88,7 @@ skip_before_filter :check_authorization, :check_authentication, :only => [:fligh
 
   def flight_feed
 
-    @events = Event.flights.all
+    @events = Event.transp.all
 
     respond_to do |format|
       format.ics { render :ics => @events }

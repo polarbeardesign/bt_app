@@ -1,20 +1,30 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
-
+gem 'rails', '3.2.21'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql2', '< 0.3.7'
+gem 'mysql2', '~> 0.3.10'
 gem 'devise'
 gem 'json'
-
+gem 'fastercsv'
+gem 'paper_trail', '~> 4.0.0.rc'
+gem 'diffy'
+gem 'acts_as_list', '< 0.3.0'
 gem 'will_paginate'
+gem 'redcarpet', '<= 2.3.0'
+gem 'exception_notification', '~> 3.0.1'
+gem 'activemerchant', :require => 'active_merchant'
 
-gem 'i18n', '= 0.6.0'
+#SEO Gems
+gem 'headliner', '~> 0.1.3'
+gem 'metamagic'
+
+#adding acts_as_state_machine for orders processing
+gem 'aasm'
+
+# to avoid railties conflict...
+gem 'i18n', '0.6.11'
 
 # Deploy with Capistrano
  gem 'capistrano', '< 2.15.5'
@@ -22,8 +32,8 @@ gem 'i18n', '= 0.6.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 

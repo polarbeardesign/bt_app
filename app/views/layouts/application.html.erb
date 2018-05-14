@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The Big Trip</title>
+  <title>The Big Trip II</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -24,7 +24,7 @@
         <%= link_to image_tag('map.png'), "/" %>
     </div>
     <div  class="title">
-      <h1>The Big Trip</h1><p class="tagline">Paris, Casablanca, Marrakesh, Nice, Wales, London</p>
+      <h1>The Big Trip II</h1><p class="tagline">Paris, Toulouse, Venice, Prague, Erlangen, Geneva</p>
     </div>
 </header>
 
@@ -34,18 +34,6 @@
 
 <div id="main">
 
-<section id="sidebar-left">
-  <%= yield :sidebar %>
-
-<%# Paris %>
-<span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.37.07156&bannertypeclick=wu_simplewhite" title="Paris, France Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_simplewhite&airportcode=LFPO&ForcedCity=Paris&ForcedState=France&wmo=07156&language=EN" alt="Find more about Weather in Paris, FR" width="160" /></a></span>
-<%# Marrakech %>
-<span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.1.60230&bannertypeclick=wu_simplewhite" title="Marrakech, Morocco Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_simplewhite&airportcode=GMMX&ForcedCity=Marrakech&ForcedState=Morocco&wmo=60230&language=EN" alt="Find more about Weather in Marrakech, MC" width="160" /></a></span>
-<%# Nice %>
-<span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.1.07690&bannertypeclick=wu_simplewhite" title="Nice, France Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_simplewhite&airportcode=LFMN&ForcedCity=Nice&ForcedState=France&wmo=07690&language=EN" alt="Find more about Weather in Nice, FR" width="160" /></a></span>
-<%# London %>
-<span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.553.03772&bannertypeclick=wu_simplewhite" title="London, United Kingdom Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_simplewhite&airportcode=EGLL&ForcedCity=London&ForcedState=United Kingdom&wmo=03772&language=EN" alt="Find more about Weather in London, UK" width="160" /></a></span>
-</section>
 <section id="content">
     <article>
         <p id="notice"><%= notice %></p>

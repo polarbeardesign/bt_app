@@ -14,7 +14,7 @@ gem 'acts_as_list', '< 0.3.0'
 gem 'will_paginate'
 gem 'redcarpet', '<= 2.3.0'
 gem 'exception_notification', '~> 3.0.1'
-gem 'activemerchant', :require => 'active_merchant'
+# gem 'activemerchant', :require => 'active_merchant'
 
 #SEO Gems
 gem 'headliner', '~> 0.1.3'

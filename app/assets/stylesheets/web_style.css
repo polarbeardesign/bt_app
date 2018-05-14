@@ -433,7 +433,6 @@ nav a:hover, nav a.sfhover {/* hover styles - my code */
   border-width: thin;
   border-collapse: collapse;
   border-spacing: 0px;
-  font-size: 0.75em;
   }
 
 th {
@@ -447,7 +446,7 @@ th {
     }
 
 .time-table td {
-  padding: 3px;
+  padding: 0.25em;
   }
 
 .time-table ul {
